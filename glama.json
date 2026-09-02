@@ -1,0 +1,12 @@
+{
+  "$schema": "https://glama.ai/mcp/schemas/v1/server.json",
+  "name": "banproof-mcp",
+  "description": "Audit TikTok Shop and Amazon affiliate video scripts for policy violations. Flags banned phrases, FTC disclosure gaps, and restricted claims; returns safe rewrites and a risk score.",
+  "license": "MIT",
+  "tools": [
+    {
+      "name": "audit_script",
+      "description": "Audit a video script for policy violations. Returns flagged phrases, risk score, and safe rewrites."
+    }
+  ]
+}
