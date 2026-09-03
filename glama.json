@@ -1,12 +1,16 @@
 {
   "$schema": "https://glama.ai/mcp/schemas/v1/server.json",
   "name": "banproof-mcp",
-  "description": "Audit TikTok Shop and Amazon affiliate video scripts for policy violations. Flags banned phrases, FTC disclosure gaps, and restricted claims; returns safe rewrites and a risk score.",
+  "description": "Audit TikTok Shop and Amazon affiliate video scripts for policy violations. Flags medical claims, urgency/scarcity, fake social proof, income claims, missing FTC disclosures, price claims, and AIGC disclosure gaps. Returns safe rewrites, TikTok violation point totals, and ready-to-submit appeal text.",
   "license": "MIT",
   "tools": [
     {
       "name": "audit_script",
-      "description": "Audit a video script for policy violations. Returns flagged phrases, risk score, and safe rewrites."
+      "description": "Audit a video script for policy violations. Detects medical claims, guarantees, false certifications, urgency/scarcity, fake social proof, income claims, missing FTC disclosures, price claims, and AIGC disclosure gaps. Optionally cross-checks script claims against a product page URL. Returns flagged phrases with safe rewrites, overall risk level, and TikTok violation point totals."
+    },
+    {
+      "name": "generate_appeal",
+      "description": "Generate a ready-to-submit appeal response for a TikTok, Amazon, or YouTube policy violation notice. Stays within TikTok's 800-character appeal limit. Returns formatted appeal text with character count."
     }
   ]
 }
